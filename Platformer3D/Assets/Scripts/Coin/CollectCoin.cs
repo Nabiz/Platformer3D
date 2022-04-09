@@ -9,7 +9,10 @@ public class CollectCoin : MonoBehaviour
 
   void OnTriggerEnter(Collider other)
   {
-      coinFX.Play();
-      this.gameObject.SetActive(false);
+        if (other.CompareTag("Player"))
+        {
+            coinFX.Play();
+            this.gameObject.SetActive(false);
+        }
   }
 }
