@@ -1,15 +1,15 @@
 using UnityEngine;
 
 public class LeverTrigger : MonoBehaviour {
-    private LeverController _leverRotate;
+    private LeverController _leverController;
     
     private void Start() {
-        _leverRotate = GetComponentInParent<LeverController>();
+        _leverController = GetComponentInParent<LeverController>();
     }
 
     private void OnTriggerEnter(Collider other) {
         if (other.CompareTag("PlayerKick")) {
-            _leverRotate.StartRotation();
+            _leverController.StartRotation();
         }
     }
 }

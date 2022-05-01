@@ -29,12 +29,11 @@ public class LeverController : MonoBehaviour {
                 StartCoroutine(Rotate(_endPositionRotation));
 
             _isRotating = true;
+            _audioSource.Play();
         }
     }
     
     private IEnumerator Rotate(Quaternion endRotation) {
-        _audioSource.Play();
-        
         Quaternion startRotation = _handlePivot.localRotation;
         float currentRotationDuration = 0f;
         while (currentRotationDuration < movingDuration) {

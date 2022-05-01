@@ -141,9 +141,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isOpen: 0
   isMoving: 0
+  openingDuration: 0.5
   doorOpenFX: {fileID: 8300000, guid: 5b71de379a826a14bb1646b92c59ac78, type: 3}
   doorCloseFX: {fileID: 8300000, guid: f5aee0822f06f0e49aff8e6ebdfcfa44, type: 3}
-  openingDuration: 0.5
 --- !u!82 &8749720347846451481
 AudioSource:
   m_ObjectHideFlags: 0
@@ -156,7 +156,7 @@ AudioSource:
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
@@ -200,7 +200,7 @@ AudioSource:
     m_Curve:
     - serializedVersion: 3
       time: 0
-      value: 0
+      value: 1
       inSlope: 0
       outSlope: 0
       tangentMode: 0
