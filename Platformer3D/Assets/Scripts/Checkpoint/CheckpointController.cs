@@ -4,20 +4,22 @@ using UnityEngine;
 
 public class CheckpointController : MonoBehaviour
 {
-    [SerializeField] private Checkpoint[] checkpoints;
+    private static List<Checkpoint> checkpoints = new List<Checkpoint>();
 
-    void Start()
+    public static void AddCheckpointToList(Checkpoint checkpoint)
     {
-        foreach (Checkpoint checkpoint in checkpoints)
-        {
-            checkpoint.SetCheckpointController(this);
-        }
+        checkpoints.Add(checkpoint);
     }
-    public void UnsetAllCheckpoints()
+    public static void UnsetAllCheckpoints()
     {
         foreach (Checkpoint checkpoint in checkpoints)
         {
             checkpoint.UnsetChackpoint();
         }
+    }
+
+    public static void ClearCheckpointList()
+    {
+        checkpoints.Clear();
     }
 }
