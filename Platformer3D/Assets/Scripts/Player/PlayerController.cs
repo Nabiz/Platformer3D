@@ -22,9 +22,12 @@ public class PlayerController : MonoBehaviour
     private float _rotation;
 
     bool _isGrounded = true;
+    
+    private Vector3 _spawnPoint;
     void Start()
     {
         _playerController = gameObject.GetComponent<CharacterController>();
+        _spawnPoint = gameObject.transform.position;
     }
 
     void Update()
@@ -55,6 +58,8 @@ public class PlayerController : MonoBehaviour
 
         UpdateAnimation(verticalInput);
         _isGrounded = _playerController.isGrounded;
+
+        DieTEST();
     }
 
     private void UpdateAnimation(float verticalInput)
@@ -89,5 +94,20 @@ public class PlayerController : MonoBehaviour
     private void ResetAttack()
     {
         _canAttack = true;
+    }
+
+    // Spawn
+    public void ChangeSpawnPoint(Vector3 spawnPoint)
+    {
+        _spawnPoint = spawnPoint;
+    }
+    public void Spawn()
+    {
+        transform.position = _spawnPoint;
+    }
+    //REMOVE AFTER TESTS
+    private void DieTEST()
+    {
+        if (transform.position.y < -50.0f) Spawn();
     }
 }
