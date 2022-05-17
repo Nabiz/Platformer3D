@@ -21,13 +21,9 @@ public class PlayerController : MonoBehaviour
     private float _speedY = 0f;
     private float _rotation;
 
-    bool _isGrounded = true;
-    
-    private Vector3 _spawnPoint;
     void Start()
     {
         _playerController = gameObject.GetComponent<CharacterController>();
-        _spawnPoint = gameObject.transform.position;
     }
 
     void Update()
@@ -40,13 +36,13 @@ public class PlayerController : MonoBehaviour
             Attack();
         }
 
-        if (_isGrounded && _velocity.y < 0)
+        if (_playerController.isGrounded && _velocity.y < 0)
         {
-            _speedY = -1f;
+            _speedY = -2f;
         }
-        if (Input.GetButtonDown("Jump") && _isGrounded && !_isAttacking)
+        if (Input.GetButtonDown("Jump") && _playerController.isGrounded && !_isAttacking)
         {
-            SetJumpVelocity(jumpHeight);
+            _speedY = Mathf.Sqrt(2 * jumpHeight * -gravity);
         }
 
         _rotation = rotationSpeed * horizontalInput;
@@ -57,24 +53,16 @@ public class PlayerController : MonoBehaviour
         _playerController.Move(_velocity * Time.deltaTime);
 
         UpdateAnimation(verticalInput);
-        _isGrounded = _playerController.isGrounded;
-
-        DieTEST();
     }
 
     private void UpdateAnimation(float verticalInput)
     {
         playerAnimator.SetBool("Attack", _isAttacking);
-        playerAnimator.SetBool("IsGrounded", _isGrounded);
+        playerAnimator.SetBool("IsGrounded", _playerController.isGrounded);
         playerAnimator.SetFloat("Speed", verticalInput);
         playerAnimator.SetFloat("RotationSpeed", _rotation);
     }
 
-    public void SetJumpVelocity(float jumpHeight)
-    {
-        _speedY = Mathf.Sqrt(2 * jumpHeight * -gravity);
-        _isGrounded = false;
-    }
 
     // Kick Attack Methods
     private void Attack()
@@ -94,20 +82,5 @@ public class PlayerController : MonoBehaviour
     private void ResetAttack()
     {
         _canAttack = true;
-    }
-
-    // Spawn
-    public void ChangeSpawnPoint(Vector3 spawnPoint)
-    {
-        _spawnPoint = spawnPoint;
-    }
-    public void Spawn()
-    {
-        transform.position = _spawnPoint;
-    }
-    //REMOVE AFTER TESTS
-    private void DieTEST()
-    {
-        if (transform.position.y < -50.0f) Spawn();
     }
 }
