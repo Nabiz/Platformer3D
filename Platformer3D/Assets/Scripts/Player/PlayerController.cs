@@ -10,7 +10,11 @@ public class PlayerController : MonoBehaviour
     [SerializeField] Animator playerAnimator;
     
     [SerializeField] float gravity = -20f;
-    [SerializeField] float jumpHeight = 2f;
+    [SerializeField] float defaultJumpHeight = 2f;
+    private float jumpHeight = 2f;
+
+    private float coyoteTime = 0.25f;
+    private float coyoteTimeCounter;
 
     [SerializeField] GameObject attackArea;
     private bool _isAttacking = false;
@@ -28,6 +32,7 @@ public class PlayerController : MonoBehaviour
     {
         _playerController = gameObject.GetComponent<CharacterController>();
         _spawnPoint = gameObject.transform.position;
+        jumpHeight = defaultJumpHeight;
     }
 
     void Update()
@@ -42,9 +47,14 @@ public class PlayerController : MonoBehaviour
 
         if (_isGrounded && _velocity.y < 0)
         {
-            _speedY = -1f;
+            _speedY = -2f;
+            coyoteTimeCounter = coyoteTime;
         }
-        if (Input.GetButtonDown("Jump") && _isGrounded && !_isAttacking)
+        else
+        {
+            coyoteTimeCounter -= Time.deltaTime;
+        }
+        if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f) && !_isAttacking)
         {
             SetJumpVelocity(jumpHeight);
         }
@@ -74,6 +84,10 @@ public class PlayerController : MonoBehaviour
     {
         _speedY = Mathf.Sqrt(2 * jumpHeight * -gravity);
         _isGrounded = false;
+    }
+    public void SetJumpHeight(float jumpHeight, bool addDefultHeight = false)
+    {
+        this.jumpHeight = addDefultHeight ? jumpHeight + defaultJumpHeight : jumpHeight;
     }
 
     // Kick Attack Methods
