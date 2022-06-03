@@ -1,0 +1,11 @@
+Dodawanie pająków do levelu:
+0. W oknie Navigation (Window -> AI -> Navigation), w zakładce Bake ustaw Agent Radius na 1 (trzeba to zrobić tylko raz dla levelu).
+1. Umieść gdzieś prefab Spider.
+2. Zanzacz wszystkie obiekty, po których pająk ma móc chodzić (platformy, etc.) i ewentualnie przeszkody, które ma omijać (drzewka, trampoliny, whatever...). W oknie Navigation, w zakładce Object zaznacz dla tych obiektów checkbox Navigation Static.
+3. W oknie Navigation, w zakładce Bake, naciśnij przycisk Bake.
+
+
+Uwagi:
+- Jeżeli będziesz zmieniać jakoś układ obiektów, po których pająk chodzić, to trzeba ponowinie zrobić Bake (pkt. 3).
+- Spider ma jako childa obiekt SightRange. W nim można w razie potrzeby zmienić wymiary triggera, który aktywuje pająka.
+- Nie umieszczaj Checkpointów w obrębie triggera SightRange, bo pająk nie będzie się wtedy aktywował po respawnie gracza.
