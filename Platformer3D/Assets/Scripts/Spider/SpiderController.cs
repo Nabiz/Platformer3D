@@ -52,10 +52,15 @@ public class SpiderController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        if (other.CompareTag("PlayerKick"))
+        {
+            Destroy(gameObject);
+        }
         if (other.CompareTag("Player"))
         {
             player.GetComponent<PlayerController>().Spawn();
             UnfollowPlayer();
         }
+
     }
 }
