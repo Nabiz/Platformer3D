@@ -102,7 +102,7 @@ public class PlayerController : MonoBehaviour
     {
         attackArea.SetActive(false);
         _isAttacking = false;
-        Invoke("ResetAttack", 1f); // Cooldown after attack: 1 second
+        Invoke("ResetAttack", 0.2f); // Cooldown after attack: 1 second
     }
 
     private void ResetAttack()
