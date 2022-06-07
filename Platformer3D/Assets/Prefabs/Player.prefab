@@ -51,7 +51,7 @@ MonoBehaviour:
   rotationSpeed: 60
   playerAnimator: {fileID: 7769030135428685587}
   gravity: -20
-  jumpHeight: 2
+  defaultJumpHeight: 2
   attackArea: {fileID: 4232176485891695782}
 --- !u!143 &4232176485446557751
 CharacterController:
@@ -83,7 +83,7 @@ GameObject:
   - component: {fileID: 4232176485891695783}
   m_Layer: 0
   m_Name: Sphere
-  m_TagString: Untagged
+  m_TagString: PlayerKick
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
