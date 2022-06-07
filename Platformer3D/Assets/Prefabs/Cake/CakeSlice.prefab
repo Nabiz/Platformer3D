@@ -24,8 +24,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3055625248458293495}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 2.72, z: 2.76}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 8100546666912135579}
@@ -191,8 +191,8 @@ MonoBehaviour:
 --- !u!1 &4423953294725954457
 GameObject:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 5774657108591005408, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-  m_PrefabInstance: {fileID: 7874190036211561849}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
@@ -201,6 +201,7 @@ GameObject:
   - component: {fileID: 8013948558325198655}
   - component: {fileID: 8803073300440925850}
   - component: {fileID: 4571992341567196429}
+  - component: {fileID: 1821396655}
   m_Layer: 0
   m_Name: CakeSlice GFX
   m_TagString: Untagged
@@ -211,13 +212,13 @@ GameObject:
 --- !u!4 &682448777579630347
 Transform:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-  m_PrefabInstance: {fileID: 7874190036211561849}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423953294725954457}
-  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.033, y: 0, z: 6.4972022e-15}
-  m_LocalScale: {x: 2, y: 2, z: 2}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -0.69, y: 0, z: -0.75}
+  m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 8100546666912135579}
   m_RootOrder: 0
@@ -225,16 +226,16 @@ Transform:
 --- !u!33 &6330467526062520731
 MeshFilter:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 4223506405448305890, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-  m_PrefabInstance: {fileID: 7874190036211561849}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423953294725954457}
   m_Mesh: {fileID: -1488990297324345098, guid: dfe45775fc3ec114c8267848cd42d436, type: 3}
 --- !u!23 &8013948558325198655
 MeshRenderer:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 176200996432992838, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-  m_PrefabInstance: {fileID: 7874190036211561849}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423953294725954457}
   m_Enabled: 1
@@ -280,8 +281,8 @@ MeshRenderer:
 --- !u!114 &8803073300440925850
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 1687849960987341795, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-  m_PrefabInstance: {fileID: 7874190036211561849}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423953294725954457}
   m_Enabled: 1
@@ -293,8 +294,8 @@ MonoBehaviour:
 --- !u!114 &4571992341567196429
 MonoBehaviour:
   m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: -3299936959150671756, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-  m_PrefabInstance: {fileID: 7874190036211561849}
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423953294725954457}
   m_Enabled: 1
@@ -302,62 +303,18 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50178d2e124266479a863d521f69265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cakeFX: {fileID: 0}
+  cakeFX: {fileID: 6484355402680498386}
   _levelSelection: MainMenu
---- !u!1001 &7874190036211561849
-PrefabInstance:
+--- !u!135 &1821396655
+SphereCollider:
   m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4423953294725954457}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
   serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 8100546666912135579}
-    m_Modifications:
-    - target: {fileID: 5774657108591005408, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_Name
-      value: CakeSlice GFX
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_RootOrder
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: -0.033
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 6.4972022e-15
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: -0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7223269754726251122, guid: aeceb9f2deb620648b020949001f3527, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: aeceb9f2deb620648b020949001f3527, type: 3}
+  m_Radius: 0.2
+  m_Center: {x: 0.1583908, y: 0.18188679, z: 0.1598}

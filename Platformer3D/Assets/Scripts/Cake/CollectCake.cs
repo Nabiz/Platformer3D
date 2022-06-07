@@ -12,6 +12,7 @@ public class CollectCake : MonoBehaviour
   {
         if (other.CompareTag("Player"))
         {
+            CheckpointController.ClearCheckpointList();
             cakeFX.Play();
             this.gameObject.SetActive(false);
             SceneManager.LoadScene(_levelSelection);
