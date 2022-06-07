@@ -6,12 +6,12 @@ public class KickBounce : MonoBehaviour
 {
     [SerializeField] float jumpHeight = 5.0f;
     private Animator animator;
-    private AudioSource audio;
+    private AudioSource audioSource;
 
     private void Start()
     {
         animator = GetComponent<Animator>();
-        audio = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
     private void OnTriggerEnter(Collider other)
     {
@@ -20,7 +20,7 @@ public class KickBounce : MonoBehaviour
             PlayerController player = other.GetComponentInParent<PlayerController>();
             player.SetJumpVelocity(jumpHeight);
             animator.SetTrigger("Kicked");
-            audio.Play();
+            audioSource.Play();
         }
     }
 }

@@ -8,6 +8,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] float rotationSpeed = 60.0f;
 
     [SerializeField] Animator playerAnimator;
+    [SerializeField] PlayerAudio playerAudio;
     
     [SerializeField] float gravity = -20f;
     [SerializeField] float defaultJumpHeight = 2f;
@@ -57,6 +58,7 @@ public class PlayerController : MonoBehaviour
         if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f) && !_isAttacking)
         {
             SetJumpVelocity(jumpHeight);
+            playerAudio.PlayJumpSound();
         }
 
         _rotation = rotationSpeed * horizontalInput;
@@ -97,6 +99,7 @@ public class PlayerController : MonoBehaviour
         _isAttacking = true;
         attackArea.SetActive(true);
         Invoke("EndAttack", 1f); // Attack duration: 1 second
+        playerAudio.PlayKickSound();
     }
     private void EndAttack()
     {
