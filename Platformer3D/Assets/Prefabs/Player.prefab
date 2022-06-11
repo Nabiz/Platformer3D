@@ -153,6 +153,7 @@ GameObject:
   - component: {fileID: 4232176485446557749}
   - component: {fileID: 4232176485446557748}
   - component: {fileID: 4232176485446557751}
+  - component: {fileID: 3339450440855695600}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -190,11 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a3cf2486f5d1349aecd25bda0ee3d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 7.5
   rotationSpeed: 60
   playerAnimator: {fileID: 7769030135428685587}
   playerAudio: {fileID: 4344634362545949117}
-  gravity: -20
+  gravity: -15
   defaultJumpHeight: 2
   attackArea: {fileID: 4232176485891695782}
 --- !u!143 &4232176485446557751
@@ -209,12 +210,25 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.6
-  m_Radius: 0.1
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.1
   m_SkinWidth: 0.01
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 0.8, z: 0.05}
+--- !u!114 &3339450440855695600
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4232176485446557750}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c9913c40f770d84db0c5f8b0333084f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerController: {fileID: 4232176485446557748}
 --- !u!1 &4232176485891695782
 GameObject:
   m_ObjectHideFlags: 0

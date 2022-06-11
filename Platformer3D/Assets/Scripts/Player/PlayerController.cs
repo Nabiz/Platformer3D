@@ -27,6 +27,7 @@ public class PlayerController : MonoBehaviour
     private float _rotation;
 
     bool _isGrounded = true;
+    bool _canJump = true;
     
     private Vector3 _spawnPoint;
     void Start()
@@ -38,7 +39,7 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        float verticalInput = Input.GetAxis("Vertical");
+        float verticalInput = Input.GetAxisRaw("Vertical");
         float horizontalInput = Input.GetAxis("Horizontal");
 
         if (Input.GetButtonDown("Attack") && _canAttack)
@@ -48,15 +49,17 @@ public class PlayerController : MonoBehaviour
 
         if (_isGrounded && _velocity.y < 0)
         {
-            _speedY = -2f;
+            _speedY = -3f;
             coyoteTimeCounter = coyoteTime;
+            _canJump = true;
         }
         else
         {
             coyoteTimeCounter -= Time.deltaTime;
         }
-        if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f) && !_isAttacking)
+        if (Input.GetButtonDown("Jump") && (coyoteTimeCounter > 0f) && !_isAttacking && _canJump)
         {
+            _canJump = false;
             SetJumpVelocity(jumpHeight);
             playerAudio.PlayJumpSound();
         }
@@ -105,7 +108,7 @@ public class PlayerController : MonoBehaviour
     {
         attackArea.SetActive(false);
         _isAttacking = false;
-        Invoke("ResetAttack", 0.2f); // Cooldown after attack: 1 second
+        Invoke("ResetAttack", 0.15f); // Cooldown after attack: 1 second
     }
 
     private void ResetAttack()
@@ -125,6 +128,6 @@ public class PlayerController : MonoBehaviour
     //REMOVE AFTER TESTS
     private void DieTEST()
     {
-        if (transform.position.y < -50.0f) Spawn();
+        if (transform.position.y < -40.0f) Spawn();
     }
 }
