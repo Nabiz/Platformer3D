@@ -191,11 +191,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a3cf2486f5d1349aecd25bda0ee3d3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 8
+  speed: 7.5
   rotationSpeed: 60
   playerAnimator: {fileID: 7769030135428685587}
   playerAudio: {fileID: 4344634362545949117}
-  gravity: -20
+  gravity: -15
   defaultJumpHeight: 2
   attackArea: {fileID: 4232176485891695782}
 --- !u!143 &4232176485446557751
@@ -210,7 +210,7 @@ CharacterController:
   m_Enabled: 1
   serializedVersion: 2
   m_Height: 1.6
-  m_Radius: 0.1
+  m_Radius: 0.25
   m_SlopeLimit: 45
   m_StepOffset: 0.1
   m_SkinWidth: 0.01
@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1c9913c40f770d84db0c5f8b0333084f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerController: {fileID: 4232176485446557748}
 --- !u!1 &4232176485891695782
 GameObject:
   m_ObjectHideFlags: 0

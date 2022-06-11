@@ -6,13 +6,17 @@ using UnityEngine.SceneManagement;
 public class QuickEscape : MonoBehaviour
 {
 
-    // Update is called once per frame
+    [SerializeField] PlayerController playerController;
     void Update()
     {
         if (Input.GetKeyDown(KeyCode.Escape))
         {
             CheckpointController.ClearCheckpointList();
             SceneManager.LoadScene("MainMenu");
+        }
+        if (Input.GetButtonDown("Reset"))
+        {
+            playerController.Spawn();
         }
     }
 }

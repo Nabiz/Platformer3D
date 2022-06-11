@@ -138,6 +138,7 @@ GameObject:
   - component: {fileID: 8100546666912135579}
   - component: {fileID: -7570587378310461017}
   - component: {fileID: -7463007935449512157}
+  - component: {fileID: 7903332876545683849}
   m_Layer: 0
   m_Name: CakeSlice
   m_TagString: Untagged
@@ -173,7 +174,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a50178d2e124266479a863d521f69265, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cakeFX: {fileID: 0}
+  cakeFX: {fileID: 6484355402680498386}
   _levelSelection: MainMenu
 --- !u!114 &-7463007935449512157
 MonoBehaviour:
@@ -187,7 +188,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8e3cd2d2f81091848b778fba6bff1dfe, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  rotateSpeed: 0
+  rotateSpeed: 100
+--- !u!135 &7903332876545683849
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3428735013850670616}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &4423953294725954457
 GameObject:
   m_ObjectHideFlags: 0
@@ -199,9 +213,6 @@ GameObject:
   - component: {fileID: 682448777579630347}
   - component: {fileID: 6330467526062520731}
   - component: {fileID: 8013948558325198655}
-  - component: {fileID: 8803073300440925850}
-  - component: {fileID: 4571992341567196429}
-  - component: {fileID: 1821396655}
   m_Layer: 0
   m_Name: CakeSlice GFX
   m_TagString: Untagged
@@ -217,7 +228,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4423953294725954457}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.69, y: 0, z: -0.75}
+  m_LocalPosition: {x: -0.391, y: -0.443, z: -0.441}
   m_LocalScale: {x: 3, y: 3, z: 3}
   m_Children: []
   m_Father: {fileID: 8100546666912135579}
@@ -278,43 +289,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &8803073300440925850
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4423953294725954457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8e3cd2d2f81091848b778fba6bff1dfe, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  rotateSpeed: 100
---- !u!114 &4571992341567196429
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4423953294725954457}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a50178d2e124266479a863d521f69265, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cakeFX: {fileID: 6484355402680498386}
-  _levelSelection: MainMenu
---- !u!135 &1821396655
-SphereCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4423953294725954457}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.2
-  m_Center: {x: 0.1583908, y: 0.18188679, z: 0.1598}
