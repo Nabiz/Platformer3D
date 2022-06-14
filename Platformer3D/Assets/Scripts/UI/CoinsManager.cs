@@ -12,12 +12,12 @@ public class CoinsManager : MonoBehaviour
     void Start()
     {
         coins = 0f;
-        textScore.text = coins.ToString() + " COINS";
+        textScore.text = coins.ToString();
     }
 
     void Update()
     {
-        textScore.text = coins.ToString() + " COINS";
+        textScore.text = coins.ToString();
     }
 
 
