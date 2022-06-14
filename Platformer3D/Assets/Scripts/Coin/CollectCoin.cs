@@ -10,7 +10,7 @@ public class CollectCoin : MonoBehaviour
 
     private void Start()
     {
-        coinsManager = GameObject.Find("Canvas").GetComponent<CoinsManager>();
+        coinsManager = GameObject.FindGameObjectsWithTag("Canvas")[0].GetComponent<CoinsManager>();
     }
 
     void OnTriggerEnter(Collider other)
