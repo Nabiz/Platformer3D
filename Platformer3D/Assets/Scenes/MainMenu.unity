@@ -97,7 +97,7 @@ LightmapSettings:
     m_ExportTrainingData: 0
     m_TrainingDataDestination: TrainingData
     m_LightProbeSampleCountMultiplier: 4
-  m_LightingDataAsset: {fileID: 0}
+  m_LightingDataAsset: {fileID: 112000000, guid: 3d6964e6a1bc020438795005c8a3bb71, type: 2}
   m_LightingSettings: {fileID: 0}
 --- !u!196 &4
 NavMeshSettings:
@@ -3266,7 +3266,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 2004043355}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 2008206595}
+        m_TargetAssemblyTypeName: MenuController, Assembly-CSharp
+        m_MethodName: Level6_run
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &2004043355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3398,6 +3410,7 @@ MonoBehaviour:
   _level3: Level2_1
   _level4: Level2_2
   _level5: Level3_1
+  _level6: Level3_2
 --- !u!4 &2008206596
 Transform:
   m_ObjectHideFlags: 0
