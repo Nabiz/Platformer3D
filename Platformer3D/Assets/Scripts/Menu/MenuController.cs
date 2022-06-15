@@ -14,6 +14,7 @@ public class MenuController : MonoBehaviour
     public string _level3;
     public string _level4;
     public string _level5;
+    public string _level6;
 
     public void Level1_run()
     {
@@ -38,6 +39,11 @@ public class MenuController : MonoBehaviour
     public void Level5_run()
     {
         SceneManager.LoadScene(_level5);
+    }
+    
+     public void Level6_run()
+    {
+        SceneManager.LoadScene(_level6);
     }
 
     public void ExitButton()
